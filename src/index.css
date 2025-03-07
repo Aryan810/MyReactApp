@@ -1,33 +1,73 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap');
-
+html{
+    height: 100vh;
+    background-color: rgba(201, 198, 198, 0.583);
+}
 *{
     font-family: 'Roboto';
     text-align: center;
 }
+
 .home{
     width: 100%;
-    display: flex;
-    flex-direction: column;
+    height: 100vh;
+    /* display: flex; */
+    /* flex-direction: column; */
     align-items: center;
 }
-.workouts{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    width: 80%;
-    /* background-color: red; */
-}
 
-.workout-details{
+
+.workouts{
+    /* background-color: #b1aeae8b; */
     display: flex;
-    margin: 20px;
+    justify-content: center;
+    width: 100%;
+}
+.title{
+    text-align: start;
+    margin-left: 4%;
+    color: rgb(30, 138, 118);
+}
+.workout-box{
+    display: flex;
+    background-color: white;
+    /* margin: 20px; */
+    width: 80%;
+    border-radius: 10px;
     padding: 10px;
-    border: 2px solid grey;
+    justify-self: center;
+    border: 2px solid rgba(198, 196, 196, 0.456);
     flex-direction: column;
     height: fit-content;
 }
 
+.workout-main{
+    display: flex;
+}
+
+.workout-details{
+    flex-grow: 30;
+    justify-content: flex-start;
+}
+
+.workout-oper{
+    flex-grow: 70;
+}
+
 .workout-details p{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    width: 50%;
+}
+
+button{
+    padding-right: 10px;
+    padding-top: 5px;
+    font-size: 1.5rem;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    background-color: rgb(212, 60, 60);
+    color: white;
+    border-radius: 10px;
+    border: none;
 }

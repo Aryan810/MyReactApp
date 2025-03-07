@@ -10,12 +10,18 @@ const WorkoutDetails = ({workout}) => {
     var sec = created_date.getSeconds();
     var time = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec ;
     return (
-        <div className="workout-details">
-            <h4 class="title">{workout.title}</h4>
-            <p class="load"><strong>Load (Kg): </strong>{workout.load}</p>
-            <p class="reps"><strong>Repetations: </strong>{workout.reps}</p>
-            <p class="ctime">{time}
-            </p>
+        <div className="workout-box">
+            <h3 class="title">{workout.title}</h3>
+            <div className="workout-main">
+                <div className="workout-details">
+                    <p class="load"><strong>Load (Kg): </strong>{workout.load}</p>
+                    <p class="reps"><strong>Repetations: </strong>{workout.reps}</p>
+                    <p class="ctime">{time}</p>
+                </div>
+                <div className="workout-oper">
+                    <button type="button" class="deletebtn">Delete</button>
+                </div>
+            </div>
         </div>
     )
 };

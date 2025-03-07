@@ -20,7 +20,6 @@ const Home = () => {
     }, []); // [] allows that the function is only fired once !
     return (
         <div className="home">
-            <h1> Home </h1>
             <div className="workouts">
                 {workouts && workouts.map((workout) => (
                     <WorkoutDetails key={workout._id} workout={workout} />
