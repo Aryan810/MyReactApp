@@ -1,3 +1,4 @@
+import { useWorkoutsContext } from "../hooks/useWorkoutsContext";
 
 const WorkoutDetails = ({workout}) => {
     var created_date = new Date(workout.createdAt);
@@ -9,6 +10,19 @@ const WorkoutDetails = ({workout}) => {
     var min = created_date.getMinutes();
     var sec = created_date.getSeconds();
     var time = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec ;
+
+    const {dispatch} = useWorkoutsContext();
+    const handleOnClick = async () => {
+        const response = await fetch(`/api/workouts/${workout._id}`, {
+            method: 'DELETE'
+        });
+
+        const json = await response.json();
+        if (response.ok){
+            dispatch({type: 'DELETE_WORKOUT', payload: json});
+        }
+    }
+
     return (
         <div className="workout-box">
             <h3 class="title">{workout.title}</h3>
@@ -19,7 +33,7 @@ const WorkoutDetails = ({workout}) => {
                     <p class="ctime">{time}</p>
                 </div>
                 <div className="workout-oper">
-                    <button type="button" class="deletebtn">Delete</button>
+                    <button type="button" class="deletebtn" onClick={handleOnClick}>Delete</button>
                 </div>
             </div>
         </div>
