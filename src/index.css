@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tiro+Devanagari+Hindi:ital@0;1&display=swap');
+:root{
+    --workout-title-color: rgb(19, 189, 175);
+    --delete-btn-color: rgb(212, 60, 60);
+}
+
+html{
+    height: 100vh;
+    background-color: rgba(230, 227, 227, 0.496);
+}
+*{
+    font-family: 'Roboto';
+    text-align: center;
+    /* margin: 0px; */
+}
+
+.home{
+    width: 100%;
+    /* height: 100vh; */
+    display: flex;
+    align-items: center;
+}
+
+
+.workouts{
+    /* background-color: #b1aeae8b; */
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.title{
+    text-align: start;
+    margin-left: 4%;
+    color: var(--workout-title-color);
+}
+.workout-box{
+    display: flex;
+    background-color: white;
+    /* margin: 20px; */
+    position: relative;
+    width: 90%;
+    border-radius: 5px;
+    margin-bottom: 1%;
+    padding: 10px;
+    justify-self: center;
+    border: 2px solid rgba(198, 196, 196, 0.456);
+    flex-direction: column;
+    height: fit-content;
+}
+
+.workout-main{
+    display: flex;
+}
+
+.workout-details{
+    flex-grow: 30;
+    justify-content: flex-start;
+}
+
+.workout-oper{
+    flex-grow: 70;
+}
+
+.workout-details p{
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+}
+
+button{
+    padding-right: 10px;
+    padding-top: 5px;
+    font-size: 1.5rem;
+    /* margin-top: 20px; */
+    width: fit-content;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    background-color: var(--delete-btn-color);
+    color: white;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition:ease-in-out;
+    transition-duration: 400ms;
+}
+
+button:hover{
+    background-color: white;
+    border: 2px solid var(--delete-btn-color);
+    color: var(--delete-btn-color);
+    transition:ease-in-out;
+    transition-duration: 400ms;
+    
+}
+
+button:active{
+    transform: translateY(3px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.deletebtn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+form{
+    /* display: flex; */
+    align-self: flex-start;
+    flex-direction: column;
+    /* background-color: white; */
+    padding: 20px;
+    border-radius: 5px;
+    width: 50%;
+}
+
+form h3{
+    text-align: start;
+    font-size: 1.5em;
+    margin-left: 0.25em;
+}
+.form-input-div *{
+    text-align: start;
+}
+.form-input-div{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    justify-content: center;
+}
+.form-input-div input{
+    padding-left: 10px;
+    height: 40px;
+}
+
+form button{
+    background-color: var(--workout-title-color);
+    margin-top: 20px;
+}
+form button:hover{
+    background-color: white;
+    border: 2px solid var(--workout-title-color);
+    color: var(--workout-title-color);
+    transition:ease-in-out;
+    transition-duration: 400ms;
+}
+.form-error{
+    background-color: rgba(233, 82, 145, 0.158);
+    color: rgba(198, 39, 39, 0.697);
+    border: 3px solid rgba(198, 39, 39, 0.697);
+    padding: 1em 1em;
+    border-radius: 5px;
+    font-weight: 900;
+    margin-top: 20px;
+    font-size: larger;
+    /* font-stretch: expanded; */
+}
