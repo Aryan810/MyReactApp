@@ -8,13 +8,16 @@
       }
     }
   ],
-  "routes": [
-    { "src": "/(.*)", "dest": "/index.html" }
-  ],
   "rewrites": [
     {
       "source": "/api/workouts/:path*",
       "destination": "https://aryanguptasapi.vercel.app/api/workouts/:path*"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/:path*",
+      "headers": [{ "key": "Cache-Control", "value": "no-cache" }]
     }
   ]
 }
