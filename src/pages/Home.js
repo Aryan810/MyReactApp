@@ -14,7 +14,7 @@ const Home = () => {
     //fires a function when a component is rendered !
     useEffect(() => {
         const fetchWorkout = async () => {
-            const response = await fetch('https://aryanguptasapi.vercel.app/api/workouts/');
+            const response = await fetch('/api/workouts/');
             const json = await response.json();
             if (response.ok){
                 // setWorkouts(json);

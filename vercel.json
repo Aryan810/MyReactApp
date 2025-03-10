@@ -1,8 +1,20 @@
 {
-    "rewrites": [
-      {
-        "source": "/api/workouts/:path*", 
-        "destination": "https://aryanguptasapi.vercel.app/api/workouts/:path*"
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "build"
       }
-    ]
-  }
+    }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "/index.html" }
+  ],
+  "rewrites": [
+    {
+      "source": "/api/workouts/:path*",
+      "destination": "https://aryanguptasapi.vercel.app/api/workouts/:path*"
+    }
+  ]
+}
