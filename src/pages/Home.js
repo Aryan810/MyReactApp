@@ -25,7 +25,7 @@ const Home = () => {
         }   
         fetchWorkout();
 
-    }, []); // [] allows that the function is only fired once !
+    }, [dispatch]); // [] allows that the function is only fired once !
     return (
         <div className="home">
             <div className="workouts">
