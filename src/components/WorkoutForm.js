@@ -9,7 +9,7 @@ const WorkoutForm = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         const workout = {"title": title, "load": load, "reps": reps};
-        const response = await fetch("/api/workouts", {
+        const response = await fetch("https://aryanguptasapi.vercel.app/api/workouts", {
             method: 'POST', 
             body: JSON.stringify(workout), 
             headers: {
