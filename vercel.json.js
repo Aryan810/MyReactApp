@@ -4,9 +4,8 @@ module.exports = {
 
       {
 
-          source: '/:path*',
-
-          destination: 'https://aryanguptasapi.vercel.app/:path*'
+          source: 'api/:path*',
+          destination: 'https://aryanguptasapi.vercel.app/api/:path*'
 
       },
 
