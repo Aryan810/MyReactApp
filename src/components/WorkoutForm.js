@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { useWorkoutsContext } from "../hooks/useWorkoutsContext";
+<<<<<<< HEAD
 
+=======
+>>>>>>> f1b044e (Changes to route to api in vercel)
 const WorkoutForm = () => {
     const { dispatch } = useWorkoutsContext();
     const [title, setTitle] = useState('');
