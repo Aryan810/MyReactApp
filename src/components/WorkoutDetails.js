@@ -13,7 +13,7 @@ const WorkoutDetails = ({workout}) => {
 
     const {dispatch} = useWorkoutsContext();
     const handleOnClick = async () => {
-        const response = await fetch(`/api/workouts${workout._id}`, {
+        const response = await fetch(`/api/workouts/${workout._id}`, {
             method: 'DELETE'
         });
 
