@@ -1,18 +1,10 @@
 import {useEffect} from 'react'
 import { useWorkoutsContext } from '../hooks/useWorkoutsContext';
 
-<<<<<<< HEAD
-
-=======
->>>>>>> f1b044e (Changes to route to api in vercel)
 // components
 import WorkoutDetails from '../components/WorkoutDetails';
 import WorkoutForm from '../components/WorkoutForm';
 
-<<<<<<< HEAD
-=======
-
->>>>>>> f1b044e (Changes to route to api in vercel)
 const Home = () => {
 
     const {workouts, dispatch} = useWorkoutsContext();

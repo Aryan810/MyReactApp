@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
   "proxy": "https://aryanguptasapi.vercel.app/",
-=======
-  "proxy": "https://aryanguptasapi.vercel.app",
->>>>>>> f1b044e (Changes to route to api in vercel)
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
@@ -14,11 +10,7 @@
     "@testing-library/user-event": "^13.5.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-<<<<<<< HEAD
-    "react-router-dom": "^7.2.0",
-=======
     "react-router-dom": "^7.3.0",
->>>>>>> f1b044e (Changes to route to api in vercel)
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
