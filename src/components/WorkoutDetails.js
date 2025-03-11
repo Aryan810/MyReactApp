@@ -9,7 +9,7 @@ const WorkoutDetails = ({workout}) => {
     var hour = created_date.getHours();
     var min = created_date.getMinutes();
     var sec = created_date.getSeconds();
-    var time = date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec ;
+    var time = date + '  ' + month + '  ' + year;
 
     const {dispatch} = useWorkoutsContext();
     const handleOnClick = async () => {
@@ -30,7 +30,8 @@ const WorkoutDetails = ({workout}) => {
                 <div className="workout-details">
                     <p class="load"><strong>Load (Kg): </strong>{workout.load}</p>
                     <p class="reps"><strong>Repetations: </strong>{workout.reps}</p>
-                    <p class="ctime">Date Added: {time}</p>
+                    <p class="date"><strong>Date Added: </strong>{time}</p>
+                    <p class="time"><strong>Time Added: </strong><div class='timediv'>{hour} <strong> : </strong>{min} <strong> : </strong>{sec}</div></p>
                 </div>
                 <div className="workout-oper">
                     <button type="button" class="deletebtn" onClick={handleOnClick}>Delete</button>

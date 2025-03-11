@@ -58,18 +58,22 @@ html{
 }
 
 .workout-details{
-    flex-grow: 30;
+    flex-grow: 50;
     justify-content: flex-start;
 }
 
 .workout-oper{
-    flex-grow: 70;
+    flex-grow: 50;
 }
 
 .workout-details p{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    margin-left: 4%;
     width: 50%;
+}
+.timediv{
+    width: fit-content;
 }
 
 button{
@@ -169,6 +173,8 @@ form button:hover{
     .home {
       flex-wrap: wrap;
       flex-direction: column;
-
+    }
+    form{
+        width: 90%;
     }
 }

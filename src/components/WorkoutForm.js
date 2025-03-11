@@ -20,7 +20,16 @@ const WorkoutForm = () => {
         const json = await response.json();
 
         if (!response.ok){
-            setError(json.error);
+            // setError(json.error);
+            const emptyFields = json.empty;
+            let err = '';
+            const sz = emptyFields.length;
+            let i;
+            for (i=0;i<sz-1;i++){
+                err += emptyFields[i] + ', ';
+            }
+            err += emptyFields[sz-1] + " are required fileds, so can't be empty";
+            setError(err);
         }else{
             setTitle('');
             setLoad('');
