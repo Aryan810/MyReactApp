@@ -30,7 +30,7 @@ const WorkoutDetails = ({workout}) => {
                 <div className="workout-details">
                     <p class="load"><strong>Load (Kg): </strong>{workout.load}</p>
                     <p class="reps"><strong>Repetations: </strong>{workout.reps}</p>
-                    <p class="ctime">{time}</p>
+                    <p class="ctime">Date Added: {time}</p>
                 </div>
                 <div className="workout-oper">
                     <button type="button" class="deletebtn" onClick={handleOnClick}>Delete</button>

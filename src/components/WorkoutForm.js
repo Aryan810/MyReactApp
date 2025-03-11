@@ -54,7 +54,7 @@ const WorkoutForm = () => {
                 />
             </div>
             <div className="form-input-div">
-                <h4>Resp:</h4>
+                <h4>Repetations:</h4>
                 <input 
                     type="number" 
                     onChange={(e) => setReps(e.target.value)}
